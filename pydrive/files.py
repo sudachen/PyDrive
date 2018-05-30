@@ -61,7 +61,7 @@ class GoogleDriveFileList(ApiResourceList):
     :returns: list -- list of pydrive.files.GoogleDriveFile.
     """
     # Teamdrive support
-    if self.get('corpora') == None:
+    if self.get('corpora') == None and self.get('corpus') == None:
         self['corpus'] = 'DEFAULT'
 
     self['supportsTeamDrives'] = True
